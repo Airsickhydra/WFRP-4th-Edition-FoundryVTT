@@ -283,7 +283,7 @@ class ActorSheetWfrp4e extends ActorSheet {
   
           else if (i.type === "weapon")
           {
-            i.encumbrance = Math.floor(i.data.encumbrance.value * i.data.quantity.value);
+            i.encumbrance = i.data.encumbrance.value * i.data.quantity.value;
             if (i.data.location.value == 0){
               i.toggleValue = i.data.equipped || false;
               inventory.weapons.items.push(i);
@@ -298,7 +298,7 @@ class ActorSheetWfrp4e extends ActorSheet {
           else if (i.type === "armour")
           {
   
-            i.encumbrance = Math.floor(i.data.encumbrance.value * i.data.quantity.value);
+            i.encumbrance = i.data.encumbrance.value * i.data.quantity.value;
             if (i.data.location.value == 0){
               i.toggleValue = i.data.worn.value || false;
               if (i.data.worn.value)
