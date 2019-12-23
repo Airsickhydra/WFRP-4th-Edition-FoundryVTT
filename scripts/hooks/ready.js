@@ -17,7 +17,7 @@ Hooks.on("ready", async () => {
            {
              try {
                if (!file.includes(".json"))
-                 throw "Not JSON file"
+                 continue
                let filename = file.substring(file.lastIndexOf("/")+1, file.indexOf(".json"));
    
                fetch(file).then(r=>r.json()).then(async records => {
@@ -110,7 +110,7 @@ Hooks.on("ready", async () => {
   //   // Render the template
   //   chatData["content"] = `
   //   <div class="table-result" data-table-id="${this._id}" data-result-id="${result.id}">
-  //       <img class="result-image" src="${result.img || CONFIG.RollTable.resultIcon}"/>
+  //       <img class="result-image" src="${result.img || WFRP4E.RollTable.resultIcon}"/>
   //       <p class="result-text">${text}</p>
   //   </div>`;
 
