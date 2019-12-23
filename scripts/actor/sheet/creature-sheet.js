@@ -21,6 +21,7 @@ class ActorSheetWfrp4eCreature extends ActorSheetWfrp4e {
      * @type {String}
      */
     get template() {
+      if ( !game.user.isGM && this.actor.limited ) return "systems/dh/templates/actors/actor-limited.html";
       return "systems/dh/templates/actors/creature-sheet.html";
     }
   

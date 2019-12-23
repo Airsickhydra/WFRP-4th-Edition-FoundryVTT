@@ -2,7 +2,7 @@
   "name": "dh",
   "title": "Dark Heresy Mod",
   "description": "A comprehensive system for running grim and perilious games of Warhammer Fantasy Roleplay in the Foundry VTT environment.",
-  "version": "0.9.2",
+  "version": "0.9.4.2",
   "author": "Airsickhydra, Moo Man",
   "scripts": [
     "./scripts/config-wfrp4e.js",
@@ -11,6 +11,7 @@
     "./scripts/utility-wfrp4e.js",
     "./scripts/opposed-wfrp4e.js",
     "./scripts/char-gen.js",
+    "./scripts/name-gen.js",
     "./scripts/actor/actor-wfrp4e.js",
     "./scripts/actor/sheet/actor-sheet.js",
     "./scripts/actor/sheet/character-sheet.js",
@@ -30,7 +31,8 @@
     "./scripts/hooks/renderChatLog.js",
     "./scripts/hooks/renderChatMessage.js",
     "./scripts/hooks/renderJournalSheet.js",
-    "./scripts/hooks/updateCombat.js"
+    "./scripts/hooks/updateCombat.js",
+    "./scripts/hooks/createChatMessage.js"
   ],
   "styles": ["./css/dh.css"],
   "packs": [
@@ -194,6 +196,9 @@
   "gridUnits": "yd",
   "primaryTokenAttribute": "status.wounds",
   "secondaryTokenAttribute": "status.advantage",
-  "minimumCoreVersion" : "0.4.0",
-  "templateVersion":2
+  "minimumCoreVersion" : "0.4.2",
+  "templateVersion":2,
+  "manifest" :  "https://raw.githubusercontent.com/Airsickhydra/WFRP-4th-Edition-FoundryVTT/stable/system.json",
+  "download" :  "https://github.com/Airsickhydra/WFRP-4th-Edition-FoundryVTT/archive/stable.zip",
+  "url" : "https://github.com/Airsickhydra/WFRP-4th-Edition-FoundryVTT"
 }
