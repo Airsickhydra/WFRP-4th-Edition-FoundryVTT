@@ -545,7 +545,7 @@ WFRP4E.weaponQualities = {
 };
 
 // Weapon Flaws
-CONFIG.weaponFlaws = {
+WFRP4E.weaponFlaws = {
   "Unbalanced": "Unbalanced",
   "Unreliable": "Unreliable",
   "Unwieldly": "Unweildly",
