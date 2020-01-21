@@ -434,7 +434,8 @@ WFRP4E.weaponGroups = {
   "MeleeExotic" : "Melee Exotic",
   "Thrown" : "Thrown",
   "Launcher" : "Launcher",
-   "Force" : "Force"
+   "Force" : "Force",
+   "brawling" : "Brawling"
 };
 
 // Weapon Group Descriptions
@@ -452,7 +453,9 @@ WFRP4E.weaponGroupDescriptions = {
   "MeleeExotic": "Weapons including both xenos and lost imperial tech.",
   "Thrown": "Grenades and thrown weapons.",
   "Launcher": "Both grenade and missile launching weaponry.",
-  "Force": "Weapons amplified by weilders of psykic power. These weapons may add their weilders WP bonus as additional weapon damage."
+  "Force": "Weapons amplified by weilders of psykic power. These weapons may add their weilders WP bonus as additional weapon damage.",
+  "brawling" : "Brawling"
+
 };
 // Weapon Reach
 WFRP4E.weaponReaches={
@@ -545,7 +548,7 @@ WFRP4E.weaponQualities = {
 };
 
 // Weapon Flaws
-CONFIG.weaponFlaws = {
+WFRP4E.weaponFlaws = {
   "Unbalanced": "Unbalanced",
   "Unreliable": "Unreliable",
   "Unwieldly": "Unweildly",
