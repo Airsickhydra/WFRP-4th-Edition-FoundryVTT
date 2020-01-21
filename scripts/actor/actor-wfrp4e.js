@@ -180,7 +180,7 @@ class ActorWfrp4e extends Actor {
        data.data.status.encumbrance.max = (data.data.characteristics.t.bonus + data.data.characteristics.s.bonus) * 5;
       }
   
-      if (game.settings.get("wfrp4e", "capAdvantageIB"))
+      if (game.settings.get("dh", "capAdvantageIB"))
         data.data.status.advantage.max = data.data.characteristics.i.bonus
       else
         data.data.status.advantage.max = 10;
