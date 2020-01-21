@@ -26,12 +26,15 @@
 {{#each randomTalents as |talent key|}}
 <div><b><a class = "talent-drag">{{talent}}</a></b></div>
 {{/each}}
-
 </div>
+
+<div><b><a class = "table-click" data-table="talents">You may reroll any duplicate Talent.</a></b></div>
 
 <div class = "exp-drag" data-exp={{exp}}><b><a >Exp: {{exp}}</a></b></div>
 
 <span class = "attribute-career-buttons">
-    <a class = 'chargen-button' data-button = 'rollAttributes' data-species="{{speciesKey}}" title = '+50 EXP'>Roll Attributes</a>
-    <a class = 'chargen-button' data-button = 'rollCareer' data-species="{{speciesKey}}" title = '+50 EXP'>Roll Career</a>
+    <a class = 'chargen-button' data-button = 'rollAttributes' data-species="{{speciesKey}}" title = '+50 EXP'>Attributes</a>
+    <a class = 'chargen-button' data-button = 'rollCareer' data-species="{{speciesKey}}" title = '+50 EXP'>Career</a>
+    <a class = 'chargen-button' data-button = 'rollDetails' data-species="{{speciesKey}}">Details</a>
   </span>
+  

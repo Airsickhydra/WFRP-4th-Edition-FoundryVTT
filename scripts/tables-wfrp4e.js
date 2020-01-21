@@ -171,7 +171,9 @@ class WFRP_Tables {
             return `<b>The Swirling Winds</b><br> <b>Roll:</b> ${eval(result.roll)} <br> <b>Modifier: </b> ${result.modifier}`;
         case "career":
            return `<b>Random Career - ${WFRP4E.species[column]}</b><br> <a class = "item-lookup">${result.name}</a> <br> <b>Roll:</b> ${result.roll}`;
-  
+        case "eyes":
+        case "hair":
+          return `<b>${this[table].name} - ${WFRP4E.species[column]}</b><br>${result.name}<br><b>Roll:</b> ${eval(result.roll)}`
         case "scatter":
           let tableHtml = '<table class = "scatter-table">' +
           " <tr>"+
@@ -212,14 +214,14 @@ class WFRP_Tables {
         return tableHtml;
 
         case "talents": 
-          return `<b>Random Talent</b><br> <a class="talent-lookup">${result.name}</a>`
+          return `<b>Random Talent</b><br> <a class="talent-drag">${result.name}</a>`
 
   
         default:
           try {
             if (result)
             {
-              let html = "";
+              let html = `<b>${this[table].name}</b><br>`;
               for (let part in result)
               {
                 if (part == "name")
@@ -237,14 +239,35 @@ class WFRP_Tables {
           }
           catch
           {
-            let tableMenu =  "<b><code>/table</code> Commands</b><br>"
-
-            for (let tableKey of Object.keys(this))
-              if (!this[tableKey].hide)  
-                tableMenu += `<a data-table='${tableKey}' class='table-click'><code>${tableKey}</code> - ${this[tableKey].name}<br></a>`
-            return tableMenu;
+            return this.tableMenu();
           }
       }
+    }
+
+    static tableMenu(showHidden = false)
+    {
+      let tableMenu =  "<b><code>/table</code> Commands</b><br>"
+      let hiddenTableCounter = 0;
+      for (let tableKey of Object.keys(this))
+      {
+        if (!showHidden)
+        {
+          if (!this[tableKey].hide)  
+            tableMenu += `<a data-table='${tableKey}' class='table-click'><code>${tableKey}</code> - ${this[tableKey].name}<br></a>`
+          else
+            hiddenTableCounter++;
+        }
+        else 
+        {
+          tableMenu += `<a data-table='${tableKey}' class='table-click'><code>${tableKey}</code> - ${this[tableKey].name}<br></a>`
+        }
+      }
+      if (hiddenTableCounter)
+      {
+        if (!showHidden)
+          tableMenu += `<a class = 'hidden-table'>+ ${hiddenTableCounter} Hidden Tables</a>`          
+      }
+      return tableMenu;
     }
   
     static criticalCastMenu(crittable)

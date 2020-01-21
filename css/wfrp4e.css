@@ -13759,7 +13759,6 @@ border-image-outset: 0px !important;
     #token-config .tab[data-tab="image"] input[type="checkbox"] {
       transform: scale(1);
       position: absolute;
-      top: 160px;
       left: 329px;
       opacity: 0.75;
       box-shadow: 0px 0px 4px inset black;
@@ -15201,9 +15200,19 @@ font-style : normal;
   position: relative;
   left: 120px;
 }
-.attribute-career-buttons .chargen-button {
-  left : 25px;
+.attribute-career-buttons{
+  display:flex;
+  justify-content: space-evenly
 }
+.attribute-career-buttons .chargen-button {
+  left : 0px;
+  
+}
+
+.attribute-career-buttons .chargen-button.careerReroll {
+  margin-top : 10px;
+}
+
 .chargen-button:hover {
 	background:linear-gradient(to bottom, #634b30 5%, #7d5d3b 100%);
 	background-color:#634b30;
@@ -15305,4 +15314,43 @@ input.card-edit {
 
 .message-content .opposed-tokens .loser img {
   border-color: red;
+}
+
+.message-content .unopposed-button {
+  text-align: right;
+  height: 0px;
+  margin-bottom:15px
+}
+#hotbar {
+  left: 238px;
+}
+
+.macro-sheet .sheet-header h1 input {
+    padding: 1px 3px;
+    margin: 0;
+    font-family: var(--actor-input-font-family);
+    font-weight: var(--actor-input-font-weight);
+    color: #d6d6d6;
+    border: 1px solid #736953a6;
+    border-left: none;
+    border-radius: 0px;
+    box-shadow: 0px 0px 10px inset black;
+    background: #352516;
+}
+
+.macro-sheet textarea[name="command"] {
+  padding: 1px 3px;
+  margin: 0;
+  font-family: var(--actor-input-font-family);
+  font-weight: var(--actor-input-font-weight);
+  color: #d6d6d6;
+  border: 1px solid #736953a6;
+  border-left: none;
+  border-radius: 0px;
+  box-shadow: 0px 0px 10px inset black;
+  background: #352516;
+}
+
+button.capture-position {
+  color: #CCC;
 }

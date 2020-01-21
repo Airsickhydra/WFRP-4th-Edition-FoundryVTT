@@ -49,72 +49,72 @@ CONFIG.statusEffects =
 CONFIG.controlIcons.defeated = "systems/dh/icons/defeated.png";
 
  CONFIG.JournalEntry.noteIcons = {
-   "Marker" : "systems/dh/icons/buildings/point_of_interest.png",
-   "Apothecary" : "systems/dh/icons/buildings/apothecary.png",
-   "Beastmen Herd 1" : "systems/dh/icons/buildings/beastmen_camp1.png",
-   "Besatmen Herd 2" : "systems/dh/icons/buildings/beastmen_camp2.png",
-   "Blacksmith" : "systems/dh/icons/buildings/blacksmith.png",
-   "Bretonnian City 1" : "systems/dh/icons/buildings/bret_city1.png",
-   "Bretonnian City 2" : "systems/dh/icons/buildings/bret_city2.png",
-   "Bretonnian City 3" : "systems/dh/icons/buildings/bret_city3.png",
-   "Bretonnian Worship" : "systems/dh/icons/buildings/bretonnia_worship.png",
-   "Caste Hill 1" : "systems/dh/icons/buildings/castle_hill1.png",
-   "Caste Hill 2" : "systems/dh/icons/buildings/castle_hill2.png",
-   "Caste Hill 3" : "systems/dh/icons/buildings/castle_hill3.png",
-   "Castle Wall" : "systems/dh/icons/buildings/castle_wall.png",
-   "Cave 1" : "systems/dh/icons/buildings/cave1.png",
-   "Cave 2" : "systems/dh/icons/buildings/cave2.png",
-   "Cave 3" : "systems/dh/icons/buildings/cave3.png",
-   "Cemetery" : "systems/dh/icons/buildings/cemetery.png",
-   "Chaos Portal" : "systems/dh/icons/buildings/chaos_portal.png",
-   "Chaos Worship" : "systems/dh/icons/buildings/chaos_worship.png",
-   "Court" : "systems/dh/icons/buildings/court.png",
-   "Dwarf Beer" : "systems/dh/icons/buildings/dwarf_beer.png",
-   "Dwarf Hold 1" : "systems/dh/icons/buildings/dwarf_hold1.png",
-   "Dwarf Hold 2" : "systems/dh/icons/buildings/dwarf_hold2.png",
-   "Dwarf Hold 3" : "systems/dh/icons/buildings/dwarf_hold3.png",
-   "Empire Barracks" : "systems/dh/icons/buildings/empire_barracks.png",
-   "Empire City 1" : "systems/dh/icons/buildings/empire_city1.png",
-   "Empire City 2" : "systems/dh/icons/buildings/empire_city2.png",
-   "Empire City 3" : "systems/dh/icons/buildings/empire_city3.png",
-   "Farm" : "systems/dh/icons/buildings/farms.png",
-   "Food" : "systems/dh/icons/buildings/food.png",
-   "Guard Post" : "systems/dh/icons/buildings/guards.png",
-   "Haunted Hill" : "systems/dh/icons/buildings/haunted_hill.png",
-   "Haunted Wood" : "systems/dh/icons/buildings/haunted_wood.png",
-   "Inn 1" : "systems/dh/icons/buildings/inn1.png",
-   "Inn 2" : "systems/dh/icons/buildings/inn2.png",
-   "Kislev City 1" : "systems/dh/icons/buildings/kislev_city1.png",
-   "Kislev City 2" : "systems/dh/icons/buildings/kislev_city2.png",
-   "Kislev City 3" : "systems/dh/icons/buildings/kislev_city3.png",
-   "Lumber" : "systems/dh/icons/buildings/lumber.png",
-   "Magic" : "systems/dh/icons/buildings/magic.png",
-   "Metal" : "systems/dh/icons/buildings/metal.png",
-   "Mountain 1" : "systems/dh/icons/buildings/mountains1.png",
-   "Mountain 2" : "systems/dh/icons/buildings/mountains2.png",
-   "Orcs" : "systems/dh/icons/buildings/orcs.png",
-   "Orc Camp" : "systems/dh/icons/buildings/orc_city.png",
-   "Port" : "systems/dh/icons/buildings/port.png",
-   "Road" : "systems/dh/icons/buildings/roads.png",
-   "Ruins" : "systems/dh/icons/buildings/ruins.png",
-   "Scroll" : "systems/dh/icons/buildings/scroll.png",
-   "Sigmar" : "systems/dh/icons/buildings/sigmar_worship.png",
-   "Stables" : "systems/dh/icons/buildings/stables.png",
-   "Standing Stones" : "systems/dh/icons/buildings/standing_stones.png",
-   "Swamp" : "systems/dh/icons/buildings/swamp.png",
-   "Temple" : "systems/dh/icons/buildings/temple.png",
-   "Textile" : "systems/dh/icons/buildings/textile.png",
-   "Tower 1" : "systems/dh/icons/buildings/tower1.png",
-   "Tower 2" : "systems/dh/icons/buildings/tower2.png",
-   "Tower Hill" : "systems/dh/icons/buildings/tower_hill.png",
-   "Wizard Tower" : "systems/dh/icons/buildings/wizard_tower.png",
-   "Ulric" : "systems/dh/icons/buildings/ulric_worship.png",
-   "Village 1" : "systems/dh/icons/buildings/village1.png",
-   "Village 2" : "systems/dh/icons/buildings/village2.png",
-   "Village 3" : "systems/dh/icons/buildings/village3.png",
-   "Wood Elves 1" : "systems/dh/icons/buildings/welves1.png",
-   "Wood Elves 2" : "systems/dh/icons/buildings/welves2.png",
-   "Wood Elves 3" : "systems/dh/icons/buildings/welves3.png"
+   "Marker" : "systems/wfrp4e/icons/buildings/point_of_interest.png",
+   "Apothecary" : "systems/wfrp4e/icons/buildings/apothecary.png",
+   "Beastmen Herd 1" : "systems/wfrp4e/icons/buildings/beastmen_camp1.png",
+   "Beastmen Herd 2" : "systems/wfrp4e/icons/buildings/beastmen_camp2.png",
+   "Blacksmith" : "systems/wfrp4e/icons/buildings/blacksmith.png",
+   "Bretonnian City 1" : "systems/wfrp4e/icons/buildings/bret_city1.png",
+   "Bretonnian City 2" : "systems/wfrp4e/icons/buildings/bret_city2.png",
+   "Bretonnian City 3" : "systems/wfrp4e/icons/buildings/bret_city3.png",
+   "Bretonnian Worship" : "systems/wfrp4e/icons/buildings/bretonnia_worship.png",
+   "Caste Hill 1" : "systems/wfrp4e/icons/buildings/castle_hill1.png",
+   "Caste Hill 2" : "systems/wfrp4e/icons/buildings/castle_hill2.png",
+   "Caste Hill 3" : "systems/wfrp4e/icons/buildings/castle_hill3.png",
+   "Castle Wall" : "systems/wfrp4e/icons/buildings/castle_wall.png",
+   "Cave 1" : "systems/wfrp4e/icons/buildings/cave1.png",
+   "Cave 2" : "systems/wfrp4e/icons/buildings/cave2.png",
+   "Cave 3" : "systems/wfrp4e/icons/buildings/cave3.png",
+   "Cemetery" : "systems/wfrp4e/icons/buildings/cemetery.png",
+   "Chaos Portal" : "systems/wfrp4e/icons/buildings/chaos_portal.png",
+   "Chaos Worship" : "systems/wfrp4e/icons/buildings/chaos_worship.png",
+   "Court" : "systems/wfrp4e/icons/buildings/court.png",
+   "Dwarf Beer" : "systems/wfrp4e/icons/buildings/dwarf_beer.png",
+   "Dwarf Hold 1" : "systems/wfrp4e/icons/buildings/dwarf_hold1.png",
+   "Dwarf Hold 2" : "systems/wfrp4e/icons/buildings/dwarf_hold2.png",
+   "Dwarf Hold 3" : "systems/wfrp4e/icons/buildings/dwarf_hold3.png",
+   "Empire Barracks" : "systems/wfrp4e/icons/buildings/empire_barracks.png",
+   "Empire City 1" : "systems/wfrp4e/icons/buildings/empire_city1.png",
+   "Empire City 2" : "systems/wfrp4e/icons/buildings/empire_city2.png",
+   "Empire City 3" : "systems/wfrp4e/icons/buildings/empire_city3.png",
+   "Farm" : "systems/wfrp4e/icons/buildings/farms.png",
+   "Food" : "systems/wfrp4e/icons/buildings/food.png",
+   "Guard Post" : "systems/wfrp4e/icons/buildings/guards.png",
+   "Haunted Hill" : "systems/wfrp4e/icons/buildings/haunted_hill.png",
+   "Haunted Wood" : "systems/wfrp4e/icons/buildings/haunted_wood.png",
+   "Inn 1" : "systems/wfrp4e/icons/buildings/inn1.png",
+   "Inn 2" : "systems/wfrp4e/icons/buildings/inn2.png",
+   "Kislev City 1" : "systems/wfrp4e/icons/buildings/kislev_city1.png",
+   "Kislev City 2" : "systems/wfrp4e/icons/buildings/kislev_city2.png",
+   "Kislev City 3" : "systems/wfrp4e/icons/buildings/kislev_city3.png",
+   "Lumber" : "systems/wfrp4e/icons/buildings/lumber.png",
+   "Magic" : "systems/wfrp4e/icons/buildings/magic.png",
+   "Metal" : "systems/wfrp4e/icons/buildings/metal.png",
+   "Mountain 1" : "systems/wfrp4e/icons/buildings/mountains1.png",
+   "Mountain 2" : "systems/wfrp4e/icons/buildings/mountains2.png",
+   "Orcs" : "systems/wfrp4e/icons/buildings/orcs.png",
+   "Orc Camp" : "systems/wfrp4e/icons/buildings/orc_city.png",
+   "Port" : "systems/wfrp4e/icons/buildings/port.png",
+   "Road" : "systems/wfrp4e/icons/buildings/roads.png",
+   "Ruins" : "systems/wfrp4e/icons/buildings/ruins.png",
+   "Scroll" : "systems/wfrp4e/icons/buildings/scroll.png",
+   "Sigmar" : "systems/wfrp4e/icons/buildings/sigmar_worship.png",
+   "Stables" : "systems/wfrp4e/icons/buildings/stables.png",
+   "Standing Stones" : "systems/wfrp4e/icons/buildings/standing_stones.png",
+   "Swamp" : "systems/wfrp4e/icons/buildings/swamp.png",
+   "Temple" : "systems/wfrp4e/icons/buildings/temple.png",
+   "Textile" : "systems/wfrp4e/icons/buildings/textile.png",
+   "Tower 1" : "systems/wfrp4e/icons/buildings/tower1.png",
+   "Tower 2" : "systems/wfrp4e/icons/buildings/tower2.png",
+   "Tower Hill" : "systems/wfrp4e/icons/buildings/tower_hill.png",
+   "Wizard Tower" : "systems/wfrp4e/icons/buildings/wizard_tower.png",
+   "Ulric" : "systems/wfrp4e/icons/buildings/ulric_worship.png",
+   "Village 1" : "systems/wfrp4e/icons/buildings/village1.png",
+   "Village 2" : "systems/wfrp4e/icons/buildings/village2.png",
+   "Village 3" : "systems/wfrp4e/icons/buildings/village3.png",
+   "Wood Elves 1" : "systems/wfrp4e/icons/buildings/welves1.png",
+   "Wood Elves 2" : "systems/wfrp4e/icons/buildings/welves2.png",
+   "Wood Elves 3" : "systems/wfrp4e/icons/buildings/welves3.png"
  }
 
 // Species
@@ -233,7 +233,7 @@ WFRP4E.speciesSkills = {
     "Intuition",
     "Language (Mootish)",
     "Lore (Reikland)",
-    "Lore (Perception)",
+    "Perception",
     "Sleight of Hand",
     "Stealth (Any)",
     "Trade (Cook)"
@@ -671,8 +671,6 @@ WFRP4E.locations = {
  "lLeg": "Left Leg",
 }
 
-
-
 // Trapping Availability
 WFRP4E.availability = {
   "None": "-",
@@ -737,6 +735,16 @@ WFRP4E.actorSizeNums = {
   "lrg": 4,
   "enor": 5,
   "mnst": 6
+};
+
+WFRP4E.tokenSizes= {
+  "tiny": 0.3,
+  "ltl": 0.5,
+  "sml": 0.8,
+  "avg": 1,
+  "lrg": 2,
+  "enor": 3,
+  "mnst": 4
 };
 
 // Condition Types
@@ -863,7 +871,8 @@ WFRP4E.symptoms = {
   "nausea" : "Nausea",
   "pox" : "Pox",
   "wounded" : "Wounded",
-  "delirium" : "Delirium"
+  "delirium" : "Delirium",
+  "swelling" : "Swelling"
 }
 
 WFRP4E.symptomDescriptions = {
@@ -879,8 +888,8 @@ WFRP4E.symptomDescriptions = {
   "nausea" : "You feel very sick and are prone to vomiting if you move around too quickly. Whenever you fail a Test involving physical movement, your nausea overwhelms you and you vomit. You gain the <a class = 'condition-chat'>Stunned</a> condition, which represents you being sick repeatedly or dry heaving, depending upon your current circumstances. ",
   "pox" : "You are covered in pustules, inﬂamed swellings, disgusting rashes, or itchy spots, which are unlikely to be your most attractive feature. Pox are largely a cosmetic issue, resulting in a penalty of –10 to Fellowship Tests. Additionally, remember to roleplay and describe all the scratching; if you want to withhold from this for a while, pass an <b>Average (+20) Cool</b> Test. When the Pox ends, attempt an <b>Average (+20) Cool</b> Test. If this fails, reverse the Test dice and apply permanent scarring to that Hit Location, showing an area where you scratched and the pox there healed badly. If the <a class='table-click' data-table = 'hitloc'>Hit Location</a> is the head, permanently lose 1 in Fellowship.",
   "wounded" : "You have a wound or open sore that does not heal properly because of an infection. For each Wounded symptom you have, you cannot heal one of your Wounds, which stays open and sore, possibly seeping foul-smelling pus. Every day, take an <b>Easy (+20) Endurance</b> Test or gain a Festering Wound if you do not already have one.",
-  "delirium" : "Your sensibility comes and goes, with moments of clarity replaced suddenly by bouts of raving, hallucinations, and terror. Make a <b>Challenging (+0) Willpower Test</b> each hour, and consult the <b><a class='table-click' data-table='delirium'>Delirium</a></b> table."
-
+  "delirium" : "Your sensibility comes and goes, with moments of clarity replaced suddenly by bouts of raving, hallucinations, and terror. Make a <b>Challenging (+0) Willpower Test</b> each hour, and consult the <b><a class='table-click' data-table='delirium'>Delirium</a></b> table.",
+  "swelling" : "A part of the body swells up to several times its normal size, turning an angry red or purple colour and becoming almost unusable. The affected body part is normally the location of a wound or bite causing the Swelling, or the point of contact where a disease or infection entered the body.<br><br><b>Head</b>: The eyes and tongue bulge, the cheeks become livid, the jaw is forced open. Eating is impossible, but clear liquids maybe sipped in small quantities. Any Tests requiring speech are 3 steps more Difficult.<br><b>Arm</b>:The arm and hand swell, the shoulder and elbow joints cannot move, and the hand becomes useless. For the duration, the arm counts as Amputated (WFRP, page 180).<br><b>Body</b>: The entire body swells until the sufferer can no longer wear clothes. All Tests involving movement become 3 steps more Difficult.<br><b>Leg</b>: The leg swells grotesquely, becoming as wide as the widest part of the thigh for its entire length. The foot is almost indistingushable. For the duration, the leg counts as Amputated (WFRP, page 180)."
 }
 
 WFRP4E.symptomTreatment = {
@@ -896,8 +905,8 @@ WFRP4E.symptomTreatment = {
   "nausea" : "Remedies for Nausea are Common and usually genuine (60% chance), and typically cost around thirty pennies; if genuine, pass a <b>Challenging (+0) Endurance</b> Test, and the Nausea can be ignored for a number of hours equal to your Toughness Bonus.",
   "pox" : "Poxes are exceedingly common, and so are remedies, which are usually creams or oils. Larger temples of Shallya often keep a stock of the cream for free (though donations are expected) and apothecaries and herbalists of all kinds sell similar products for relatively low prices (rarely more than six or seven pence for a week’s worth of treatment, with a 90% chance of being genuine medicine). Using a cream increases all Cool Tests to resist scratching to <b>Very Easy (+60)</b>, but is usually unsightly.",
   "wounded" : "A daily successful Heal Test ensures the Wound is clean and does not require an Endurance Test to be further infected.",
-  "delirium" : "Some authorities treat delirium as part of a fever, prescribing the same measures. Remedies cost from a few pennies to a few shillings, and 10% are genuine.<br><br>With the correct medicine, a successful <b>Challenging (+0) Heal</b> Test banishes the hallucinations for <b><a class = 'chat-roll'>1d10</a></b> hours.<br><br>It is also common to sedate delirious patients with a tranquillising drug, such as Moonflower or even Nightshade, to keep the patient comfortable until the condition has passed, sending them into a Fitful Sleep until they either recover or die."
-
+  "delirium" : "Some authorities treat delirium as part of a fever, prescribing the same measures. Remedies cost from a few pennies to a few shillings, and 10% are genuine.<br><br>With the correct medicine, a successful <b>Challenging (+0) Heal</b> Test banishes the hallucinations for <b><a class = 'chat-roll'>1d10</a></b> hours.<br><br>It is also common to sedate delirious patients with a tranquillising drug, such as Moonflower or even Nightshade, to keep the patient comfortable until the condition has passed, sending them into a Fitful Sleep until they either recover or die.",
+  "swelling" : "Most treatments involve plunging the affected part, or sometimes the whole body, into an ice-water bath to reduce the heat that accompanies the swellings. An Extended <b>Hard (-20) Heal Test</b> requiring +3 SL reduces the swelling by <b><a class = 'chat-roll'>2d10</a></b> hours. Each Test takes an hour. The patient is left with +1 Fatigued Condition for every Test made in the process.<br><br>Some physicians instead bleed the patient with a blade or leeches. A successful <b>Extended Heal Test</b> requiring +4 SL and Trade Tools (Physician) reduces the swelling by (<a class = 'chat-roll'>1d10</a> + the patient's Toughness Bonus) hours. Each Test has a base Difficulty of <b>Impossible (-50)</b> and takes half an hour."
 }
 
 WFRP4E.earningValues = {
@@ -912,6 +921,59 @@ WFRP4E.randomExp = {
   careerReroll : 25,
   statsRand : 50,
   statsReorder : 25
+}
+
+WFRP4E.traitBonuses = {
+  "big" : { 
+    "s" :   10,
+    "t" :   10,
+    "ag" : -5
+  },
+  "brute" : {
+    "m" :  -1,
+    "t" :   10,
+    "s" :   10,
+    "ag" : -10
+  },
+  "clever" : { 
+    "int" : 20,
+    "i" :   10
+  },
+  "cunning" : { 
+    "int" : 10,
+    "fel" : 10,
+    "i" :   10
+  },
+  "elite" : { 
+    "ws" : 20,
+    "bs" : 20,
+    "wp" : 20
+  },
+  "fast" : { 
+    "ag" : 10,
+    "m" : 1
+  },
+  "leader" : { 
+    "fel" : 10,
+    "wp" :  10
+  },
+  "tough" : { 
+    "t" :   10,
+    "wp" :  10
+  }
+}
+
+WFRP4E.talentBonuses = {
+  "savvy" : "int",
+  "suave" : "fel",
+  "marksman" : "bs",
+  "very strong" : "s",
+  "sharp" : "i",
+  "lightning reflexes" : "ag",
+  "coolheaded" : "wp",
+  "very resilient" : "t",
+  "nimble fingered" : "dex",
+  "warrior born" : "ws"
 }
 
 const DAMAGE_TYPE = {

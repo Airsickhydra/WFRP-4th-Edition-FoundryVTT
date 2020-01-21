@@ -82,7 +82,7 @@ class ItemWfrp4e extends Item {
       data.properties.push("<b>Skills</b>: " + this.data.data.skills.map(i => i = " " + i));
       data.properties.push("<b>Talents</b>: " + this.data.data.talents.map (i => i = " " + i));
       data.properties.push("<b>Trappings</b>: " + this.data.data.trappings.map (i => i = " " + i));
-      data.properties.push("<b>Income</b>: " + this.data.data.incomeSkill.map(i => ` <a class = 'career-income' data-career-id=${this.data.id}> ${this.data.data.skills[i]} <i class="fas fa-coins"></i></a>`));
+      data.properties.push("<b>Income</b>: " + this.data.data.incomeSkill.map(i => ` <a class = 'career-income' data-career-id=${this.data._id}> ${this.data.data.skills[i]} <i class="fas fa-coins"></i></a>`));
       return data;
     }
   
@@ -104,7 +104,7 @@ class ItemWfrp4e extends Item {
   
     _spellExpandData() {
       const data = duplicate(this.data.data);
-      let preparedSpell = WFRP_Utility._prepareSpellOrPrayer(this.actor.data, duplicate(this.data));
+      let preparedSpell = this.actor.prepareSpellOrPrayer(duplicate(this.data));
       data.description = preparedSpell.data.description
       data.properties = [];
       data.properties.push("Range: " + preparedSpell.range);
@@ -120,7 +120,7 @@ class ItemWfrp4e extends Item {
   
      _prayerExpandData() {
       const data = duplicate(this.data.data);
-      let preparedPrayer = WFRP_Utility._prepareSpellOrPrayer(this.actor.data, this.data);
+      let preparedPrayer = this.actor.prepareSpellOrPrayer(this.data);
       data.properties = [];
       data.properties.push("Range: " + preparedPrayer.range);
       data.properties.push("Target: " + preparedPrayer.target);
@@ -205,17 +205,14 @@ class ItemWfrp4e extends Item {
   
       if (chatData.img.includes("/blank.png"))
         chatData.img = null;
-  
-      chatData.transfer = JSON.stringify(
-        {
-          data : this.data,
-          postedItem : true
-        }
-      );
 
       renderTemplate('systems/dh/templates/chat/post-item.html', chatData).then(html => {
   
         chatOptions["content"] = html;
+        chatOptions["flags.transfer"] = JSON.stringify({
+            data : this.data,
+            postedItem : true
+          })
         ChatMessage.create(chatOptions)
     });
   }

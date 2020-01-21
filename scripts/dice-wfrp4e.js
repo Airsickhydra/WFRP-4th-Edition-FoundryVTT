@@ -31,7 +31,8 @@ class DiceWFRP {
       mergeObject(cardOptions,
         {
           user : game.user._id,
-          sound : CONFIG.sounds.dice
+          sound : CONFIG.sounds.dice,
+          type: CONST.CHAT_MESSAGE_TYPES.ROLL
         })
 
       var roll;
@@ -49,9 +50,13 @@ class DiceWFRP {
         new Dialog({
             title: dialogOptions.title,
             content: dlg,
-            buttons: dialogOptions.buttons,
-            default: "rollButton",
-            close: html => dialogOptions.callback(html, roll)
+            buttons : {
+              rollButton : {
+                label: "Roll",
+                callback : html => dialogOptions.callback(html, roll)
+              }
+            },
+            default: "rollButton"
           }).render(true);
       });
     }
@@ -81,7 +86,7 @@ class DiceWFRP {
       // Additionally, the auto-success/failure range can complicate things even more.
 
       // Failure
-      if (roll.total >= 96 || roll.total > targetNum)
+      if (roll.total >= 96 || roll.total > targetNum && roll.total > 5)
       {
         description = "Failure"
         if (roll.total >= 96 && SL > -1)
@@ -294,9 +299,9 @@ class DiceWFRP {
         if (weapon.properties.flaws.includes("Tiring") && (damageToUse != testResults.SL || weapon.properties.qualities.includes("Impact")))
         {
           if (testData.extra.attackType == "melee")
-            testResults.damage = `${eval(weapon.data.damage.meleeValue + testResults.SL)} | ${testResults.damage}` ;
+            testResults.damage = `<a class = "damage-select">${eval(weapon.data.damage.meleeValue + testResults.SL)}</a> | <a class = "damage-select">${testResults.damage}</a>` ;
           if (testData.extra.attackType == "ranged")
-            testResults.damage = `${eval(weapon.data.damage.rangedValue + testResults.SL)} | ${testResults.damage}` ;
+            testResults.damage = `<a class = "damage-select">${eval(weapon.data.damage.rangedValue + testResults.SL)}</a> | <a class = "damage-select">${testResults.damage}</a>` ;
         }
 
        return testResults;
@@ -467,7 +472,7 @@ class DiceWFRP {
       else if (spell.data.cn.SL < 0)
        spell.data.cn.SL = 0;
 
-       actor.updateOwnedItem({id: spell.id , 'data.cn.SL' : spell.data.cn.SL});
+       actor.updateEmbeddedEntity("OwnedItem", {_id: spell._id , 'data.cn.SL' : spell.data.cn.SL});
 
        switch (miscastCounter)
        {
@@ -583,6 +588,7 @@ class DiceWFRP {
 
      if ( ["gmroll", "blindroll"].includes(chatOptions.rollMode) ) chatOptions["whisper"] = ChatMessage.getWhisperIDs("GM");
      if ( chatOptions.rollMode === "blindroll" ) chatOptions["blind"] = true;
+     //else if ( chatOptions.rollMode === "selfroll" ) chatOptions["whisper"] = [game.user._id];
 
      // All the data need to recreate the test when chat card is edited
      chatOptions["flags.data"] = {
@@ -831,21 +837,55 @@ class DiceWFRP {
           break;
         case "rollCareer" : GeneratorWfrp4e.rollCareer($(event.currentTarget).attr("data-species"), WFRP4E.randomExp.careerRand)
           break;
+        case "rerollCareer" : GeneratorWfrp4e.rollCareer($(event.currentTarget).attr("data-species"), WFRP4E.randomExp.careerReroll, true)
+                              GeneratorWfrp4e.rollCareer($(event.currentTarget).attr("data-species"), WFRP4E.randomExp.careerReroll, true)
+          break;
+        case "chooseCareer" : GeneratorWfrp4e.chooseCareer($(event.currentTarget).attr("data-species"))
+          break;
         case "rollAttributes" : GeneratorWfrp4e.rollAttributes($(event.currentTarget).attr("data-species"),WFRP4E.randomExp.statsRand)
+          break;
+        case "rollDetails" : GeneratorWfrp4e.rollDetails($(event.currentTarget).attr("data-species"))
           break;
       }
     });
 
+    html.on("click", '.career-select', event => {
+      event.preventDefault();
+      let careerSelected = $(event.currentTarget).attr("data-career")
+      let species = $(event.currentTarget).attr("data-species")
+      GeneratorWfrp4e.displayCareer(careerSelected, species, 0, false, true)
+    });
       
-  html.on("click", '.random-talents', event => {
-    event.preventDefault();
-    $(event.currentTarget).attr("data-num")
-  });
+    html.on("click", '.random-talents', event => {
+      event.preventDefault();
+      $(event.currentTarget).attr("data-num")
+    });
 
+    html.on("click", '.unopposed-button', event =>{
+      event.preventDefault()
+      let messageId = $(event.currentTarget).parents('.message').attr("data-message-id")
+      OpposedWFRP.resolveUnopposed(messageId)
+    })
+
+    html.on("click", '.damage-select', event =>{
+      event.preventDefault()
+      let messageId = $(event.currentTarget).parents('.message').attr("data-message-id")
+      let message = game.messages.get(messageId)
+      let msgContent = $(message.data.content)
+      msgContent.find(".card-damage").replaceWith(`(${event.target.text} Damage)`)
+      let newContent = msgContent.html()
+
+      message.update({content: newContent , "flags.data.postData.damage" : Number(event.target.text)})
+    })
+
+    html.on("click", '.hidden-table', event =>{
+      event.preventDefault()
+      let html = WFRP_Tables.tableMenu(true);
+      let chatData = WFRP_Utility.chatDataSetup(html)
+      ChatMessage.create(chatData);
+    })
   }
-
-
-
+  
     static toggleEditable(html)
     {
       let elementsToToggle = $(html).parents(".chat-card").find(".display-toggle")

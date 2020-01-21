@@ -146,7 +146,7 @@
       <span class="top label">Critical Wounds</span>
       <div class="criticalWounds-value-box">
         <div id="value">
-          <input name="data.status.criticalWounds.value" type="text" value="{{data.status.criticalWounds.value}}" readonly>
+          <input name="data.status.criticalWounds.value" type="text" value="{{actor.criticalCount}}" readonly>
         </div>
         <div id="divisor" class="divisor">
           /
@@ -225,7 +225,7 @@
 
   <ol class="inventory-list save-scroll">
     {{#each actor.careers as |item i|}}
-    <li class="item career-item" data-item-id="{{item.id}}">
+    <li class="item career-item" data-item-id="{{item._id}}">
       <div class="content">
         <div class="item-name item-dropdown">
           <div class="image" style="background-image: url({{item.img}})"></div>
