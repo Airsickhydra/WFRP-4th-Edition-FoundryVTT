@@ -3,27 +3,25 @@
   "title": "Dark Heresy Mod",
   "description": "A comprehensive system for running grim and perilious games of Warhammer Fantasy Roleplay in the Foundry VTT environment.",
   "version": "0.9.6.2",
-  "author": "CatoThe1stElder, Moo Man",
+  "author": "Airsickhydra, Moo Man",
   "scripts": [
-    "./scripts/config-wfrp4e.js",
-    "./scripts/dice-wfrp4e.js",
-    "./scripts/tables-wfrp4e.js",
-    "./scripts/utility-wfrp4e.js",
-    "./scripts/opposed-wfrp4e.js",
+    "./scripts/config-dh.js",
+    "./scripts/dice-dh.js",
+    "./scripts/tables-dh.js",
+    "./scripts/utility-dh.js",
+    "./scripts/opposed-dh.js",
     "./scripts/char-gen.js",
     "./scripts/name-gen.js",
-    "./scripts/actor/actor-wfrp4e.js",
+    "./scripts/actor/actor-dh.js",
     "./scripts/actor/sheet/actor-sheet.js",
     "./scripts/actor/sheet/character-sheet.js",
     "./scripts/actor/sheet/creature-sheet.js",
     "./scripts/actor/sheet/npc-sheet.js",
     "./scripts/item/item-sheet.js",
-    "./scripts/item/item-wfrp4e.js",
+    "./scripts/item/item-dh.js",
     "./scripts/hooks/canvasInit.js",
     "./scripts/hooks/chatMessage.js",
     "./scripts/hooks/createOwnedItem.js",
-    "./scripts/hooks/preCreateActor.js",
-    "./scripts/hooks/renderTokenHUD.js",
     "./scripts/hooks/deleteCombat.js",
     "./scripts/hooks/getActorDirectoryEntryContext.js",
     "./scripts/hooks/getCombatTrackerEntryContext.js",
@@ -53,7 +51,8 @@
       "system": "dh",
       "module": "dh",
       "path": "packs/dh4eskills.db",
-      "entity": "Item"
+      "entity": "Item",
+      "tag" : "skill"
     },
     {
       "name": "dh4eitems",
@@ -139,8 +138,8 @@
       "label": "Psychologies",
       "path": "./packs/psychologies.db",
       "entity": "Item",
-      "module": "wfrp4e",
-      "system": "wfrp4e",
+      "module": "dh",
+      "system": "dh",
       "tag" : "pyschology"
     },
     {
@@ -148,8 +147,8 @@
       "label": "Mutations",
       "path": "./packs/mutations.db",
       "entity": "Item",
-      "module": "wfrp4e",
-      "system": "wfrp4e",
+      "module": "dh",
+      "system": "dh",
       "tag" : "mutation"
     },
     {
@@ -157,8 +156,8 @@
       "label": "Injuries",
       "path": "./packs/injuries.db",
       "entity": "Item",
-      "module": "wfrp4e",
-      "system": "wfrp4e",
+      "module": "dh",
+      "system": "dh",
       "tag" : "injury"
     },
     {
@@ -166,8 +165,8 @@
       "label": "Diseases",
       "path": "./packs/diseases.db",
       "entity": "Item",
-      "module": "wfrp4e",
-      "system": "wfrp4e",
+      "module": "dh",
+      "system": "dh",
       "tag" : "disease"
     },
     {
@@ -175,8 +174,8 @@
       "label": "Spells",
       "path": "./packs/spells.db",
       "entity": "Item",
-      "module": "wfrp4e",
-      "system": "wfrp4e",
+      "module": "dh",
+      "system": "dh",
       "tag" : "spell"
     },
 	{
@@ -184,8 +183,8 @@
       "label": "Prayers",
       "path": "./packs/prayers.db",
       "entity": "Item",
-      "module": "wfrp4e",
-      "system": "wfrp4e",
+      "module": "dh",
+      "system": "dh",
       "tag" : "prayer"
     },
     {
@@ -193,8 +192,8 @@
       "label": "Trappings",
       "path": "./packs/trappings.db",
       "entity": "Item",
-      "module": "wfrp4e",
-      "system": "wfrp4e",
+      "module": "dh",
+      "system": "dh",
       "tag" : "trapping"
     }
   ],
@@ -204,7 +203,7 @@
   "gridUnits": "yd",
   "primaryTokenAttribute": "status.wounds",
   "secondaryTokenAttribute": "status.advantage",
-  "minimumCoreVersion" : "0.4.4",
+  "minimumCoreVersion" : "0.4.5",
   "templateVersion":2,
   "manifest" :  "https://raw.githubusercontent.com/Airsickhydra/WFRP-4th-Edition-FoundryVTT/stable/system.json",
   "download" :  "https://github.com/Airsickhydra/WFRP-4th-Edition-FoundryVTT/archive/stable.zip",

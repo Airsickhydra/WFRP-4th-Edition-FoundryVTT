@@ -333,11 +333,6 @@
         "type": "String",
         "label": "Description",
         "value": ""
-        },
-        "gmdescription": {
-          "type": "String",
-          "label": "Description",
-          "value": ""
         }
       },
       "location": {

@@ -82,7 +82,7 @@ Hooks.on("ready", async () => {
     //       ["data.location.value"] : "Leg",
     //       img: "systems/dh/icons/injuries/tornleg.png"
     //     }
-    //     Itemdh.create(itemData)
+    //     ItemWfrp4e.create(itemData)
     //   }
     //   i++
     // }

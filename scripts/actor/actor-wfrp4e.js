@@ -154,7 +154,7 @@ class ActorWfrp4e extends Actor {
       if (data.flags.autoCalcEnc)
         data.data.status.encumbrance.max = data.data.characteristics.t.bonus + data.data.characteristics.s.bonus;
 
-      if (game.settings.get("wfrp4e", "capAdvantageIB"))
+      if (game.settings.get("dh", "capAdvantageIB"))
         data.data.status.advantage.max = data.data.characteristics.i.bonus
       else
         data.data.status.advantage.max = 10;
@@ -210,7 +210,7 @@ class ActorWfrp4e extends Actor {
     // Setup dialog data: title, template, buttons, prefilled data
     let dialogOptions = {
       title: title,
-      template : "/systems/wfrp4e/templates/chat/characteristic-dialog.html",
+      template : "/systems/dh/templates/chat/characteristic-dialog.html",
       // Prefilled dialog data
       data : {
         hitLocation : testData.hitLocation,
@@ -241,7 +241,7 @@ class ActorWfrp4e extends Actor {
     };
 
     // Call the universal cardOptions helper
-    let cardOptions = this._setupCardOptions("systems/wfrp4e/templates/chat/characteristic-card.html", title)
+    let cardOptions = this._setupCardOptions("systems/dh/templates/chat/characteristic-card.html", title)
 
     // Provide these 3 objects to prepareTest() to create the dialog and assign the roll function
     DiceWFRP.prepareTest({
@@ -283,7 +283,7 @@ class ActorWfrp4e extends Actor {
     // Setup dialog data: title, template, buttons, prefilled data
     let dialogOptions = {
       title: title,
-      template : "/systems/wfrp4e/templates/chat/skill-dialog.html",
+      template : "/systems/dh/templates/chat/skill-dialog.html",
       // Prefilled dialog data
       data : {
         hitLocation : testData.hitLocation,
@@ -328,7 +328,7 @@ class ActorWfrp4e extends Actor {
       dialogOptions.rollOverride = this.constructor.incomeOverride;
 
     // Call the universal cardOptions helper
-    let cardOptions = this._setupCardOptions("systems/wfrp4e/templates/chat/skill-card.html", title)
+    let cardOptions = this._setupCardOptions("systems/dh/templates/chat/skill-card.html", title)
 
     // Provide these 3 objects to prepareTest() to create the dialog and assign the roll function
     DiceWFRP.prepareTest({
@@ -411,7 +411,7 @@ class ActorWfrp4e extends Actor {
 
     // Try to automatically fill the dialog with values based on context
     // If the auto-fill setting is true, and there is combat....
-    if (game.settings.get("wfrp4e", "testAutoFill") && (game.combat && game.combat.data.round != 0 && game.combat.turns))
+    if (game.settings.get("dh", "testAutoFill") && (game.combat && game.combat.data.round != 0 && game.combat.turns))
     {
       try
       {
@@ -464,7 +464,7 @@ class ActorWfrp4e extends Actor {
     // Setup dialog data: title, template, buttons, prefilled data
     let dialogOptions = {
       title: title,
-      template : "/systems/wfrp4e/templates/chat/weapon-dialog.html",
+      template : "/systems/dh/templates/chat/weapon-dialog.html",
       // Prefilled dialog data
       data : {
         hitLocation : testData.hitLocation,
@@ -536,7 +536,7 @@ class ActorWfrp4e extends Actor {
     };
 
     // Call the universal cardOptions helper
-    let cardOptions = this._setupCardOptions("systems/wfrp4e/templates/chat/weapon-card.html", title)
+    let cardOptions = this._setupCardOptions("systems/dh/templates/chat/weapon-card.html", title)
 
     // Provide these 3 objects to prepareTest() to create the dialog and assign the roll function
     DiceWFRP.prepareTest({
@@ -561,7 +561,7 @@ class ActorWfrp4e extends Actor {
       this.setupCast(spell)
     else
     {
-      renderTemplate("systems/wfrp4e/templates/chat/cast-channel-dialog.html").then(dlg => {
+      renderTemplate("systems/dh/templates/chat/cast-channel-dialog.html").then(dlg => {
         new Dialog({
           title: "Cast or Channell",
           content: dlg,
@@ -630,7 +630,7 @@ class ActorWfrp4e extends Actor {
     // Setup dialog data: title, template, buttons, prefilled data
     let dialogOptions = {
       title: title,
-      template : "/systems/wfrp4e/templates/chat/spell-dialog.html",
+      template : "/systems/dh/templates/chat/spell-dialog.html",
       // Prefilled dialog data
       data : {
         hitLocation : testData.hitLocation,
@@ -697,7 +697,7 @@ class ActorWfrp4e extends Actor {
     };
 
     // Call the universal cardOptions helper
-    let cardOptions = this._setupCardOptions("systems/wfrp4e/templates/chat/spell-card.html", title)
+    let cardOptions = this._setupCardOptions("systems/dh/templates/chat/spell-card.html", title)
 
     // Provide these 3 objects to prepareTest() to create the dialog and assign the roll function
     DiceWFRP.prepareTest({
@@ -750,7 +750,7 @@ class ActorWfrp4e extends Actor {
     // Setup dialog data: title, template, buttons, prefilled data
     let dialogOptions = {
       title: title,
-      template : "/systems/wfrp4e/templates/chat/channell-dialog.html",
+      template : "/systems/dh/templates/chat/channell-dialog.html",
       // Prefilled dialog data
       data : {
         malignantInfluence : testData.malignantInfluence,
@@ -810,7 +810,7 @@ class ActorWfrp4e extends Actor {
     };
 
     // Call the universal cardOptions helper
-    let cardOptions = this._setupCardOptions("systems/wfrp4e/templates/chat/channell-card.html", title)
+    let cardOptions = this._setupCardOptions("systems/dh/templates/chat/channell-card.html", title)
 
     // Provide these 3 objects to prepareTest() to create the dialog and assign the roll function
     DiceWFRP.prepareTest({
@@ -860,7 +860,7 @@ class ActorWfrp4e extends Actor {
     // Setup dialog data: title, template, buttons, prefilled data
     let dialogOptions = {
       title: title,
-      template : "/systems/wfrp4e/templates/chat/prayer-dialog.html",
+      template : "/systems/dh/templates/chat/prayer-dialog.html",
       // Prefilled dialog data
       data : {
         hitLocation : testData.hitLocation,
@@ -911,7 +911,7 @@ class ActorWfrp4e extends Actor {
     };
 
     // Call the universal cardOptions helper
-    let cardOptions = this._setupCardOptions("systems/wfrp4e/templates/chat/prayer-card.html", title)
+    let cardOptions = this._setupCardOptions("systems/dh/templates/chat/prayer-card.html", title)
 
     // Provide these 3 objects to prepareTest() to create the dialog and assign the roll function
     DiceWFRP.prepareTest({
@@ -949,7 +949,7 @@ class ActorWfrp4e extends Actor {
     // Setup dialog data: title, template, buttons, prefilled data
     let dialogOptions = {
       title: title,
-      template : "/systems/wfrp4e/templates/chat/skill-dialog.html", // Reuse skill dialog
+      template : "/systems/dh/templates/chat/skill-dialog.html", // Reuse skill dialog
       // Prefilled dialog data
       data : {
         hitLocation : testData.hitLocation,
@@ -988,7 +988,7 @@ class ActorWfrp4e extends Actor {
     };
 
     // Call the universal cardOptions helper
-    let cardOptions = this._setupCardOptions("systems/wfrp4e/templates/chat/skill-card.html", title)
+    let cardOptions = this._setupCardOptions("systems/dh/templates/chat/skill-card.html", title)
 
     // Provide these 3 objects to prepareTest() to create the dialog and assign the roll function
     DiceWFRP.prepareTest({
@@ -3258,7 +3258,7 @@ CONFIG.Actor.entityClass = ActorWfrp4e;
 // Treat the custom default token as a true default token
 // If you change the actor image from the default token, it will automatically set the same image to be the token image
 Hooks.on("preUpdateActor", (data, updatedData) =>{
-  if (data.data.token.img == "systems/wfrp4e/tokens/unknown.png" && updatedData.img)
+  if (data.data.token.img == "systems/dh/tokens/unknown.png" && updatedData.img)
   {
     updatedData["token.img"] = updatedData.img;
   }

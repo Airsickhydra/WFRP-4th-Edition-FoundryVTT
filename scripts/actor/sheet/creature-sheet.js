@@ -14,7 +14,7 @@ class ActorSheetWfrp4eCreature extends ActorSheetWfrp4e
 		const options = super.defaultOptions;
 		mergeObject(options,
 		{
-			classes: options.classes.concat(["wfrp4e", "actor", "creature-sheet"]),
+			classes: options.classes.concat(["dh", "actor", "creature-sheet"]),
 			width: 610,
 			height: 740,
 		});
@@ -28,8 +28,8 @@ class ActorSheetWfrp4eCreature extends ActorSheetWfrp4e
 	 */
 	get template()
 	{
-		if (!game.user.isGM && this.actor.limited) return "systems/wfrp4e/templates/actors/actor-limited.html";
-		return "systems/wfrp4e/templates/actors/creature-sheet.html";
+		if (!game.user.isGM && this.actor.limited) return "systems/dh/templates/actors/actor-limited.html";
+		return "systems/dh/templates/actors/creature-sheet.html";
 	}
 
 
@@ -297,7 +297,7 @@ class ActorSheetWfrp4eCreature extends ActorSheetWfrp4e
 }
 
 // Register Creature Sheet
-Actors.registerSheet("wfrp4e", ActorSheetWfrp4eCreature,
+Actors.registerSheet("dh", ActorSheetWfrp4eCreature,
 {
 	types: ["creature"],
 	makeDefault: true

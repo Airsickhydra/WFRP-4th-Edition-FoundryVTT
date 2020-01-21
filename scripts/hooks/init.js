@@ -244,12 +244,12 @@ Hooks.once("init", () => {
         "d10Init": "Roll a d10 and add Initiative, higher goes first",
         "d10InitAgi": "Roll a d10, add Initiative Bonus and Agility Bonus, higher goes first"
       },
-      onChange: rule => _setdhInitiative(rule)
+      onChange: rule => _setWfrp4eInitiative(rule)
     });
-    _setdhInitiative(game.settings.get("dh", "initiativeRule"));
+    _setWfrp4eInitiative(game.settings.get("dh", "initiativeRule"));
   
   
-    function _setdhInitiative(initMethod)
+    function _setWfrp4eInitiative(initMethod)
     {
       let formula;
       switch (initMethod)

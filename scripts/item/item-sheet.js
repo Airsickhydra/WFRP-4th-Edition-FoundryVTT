@@ -169,7 +169,7 @@ class ItemSheetWfrp4e extends ItemSheet {
             let folder = game.folders.entities.find(f => f.name == "Lore of " + WFRP4E.magicLores[lore])
   
             await this.item.update({'data.lore.value' : lore});
-           // await this.item.update({'img' : `systems/wfrp4e/icons/spells/${lore}.png`})
+           // await this.item.update({'img' : `systems/dh/icons/spells/${lore}.png`})
            // await this.item.update({"name" : this.item.data.data.name + " ("+WFRP4E.magicLores[lore]+")"});
            // if (folder)
            //   await this.item.update({"folder" : folder.id})

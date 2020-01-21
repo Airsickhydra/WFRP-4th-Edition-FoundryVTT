@@ -2,24 +2,24 @@ class NameGenWfrp
 {
   static _loadNames()
   {
-    console.log("wfrp4e | Loading Names...")
-    fetch("systems/wfrp4e/names/human_surnames.txt").then(r => r.text()).then(async nameText => {
+    console.log("dh | Loading Names...")
+    fetch("systems/dh/names/human_surnames.txt").then(r => r.text()).then(async nameText => {
       this.surnames = []
        nameText.split("\n").forEach((nameGroup) => this.surnames.push(nameGroup.split(",").map(function(item) { return item.trim()})))
     })
-    fetch("systems/wfrp4e/names/human_surnames_prefix.txt").then(r => r.text()).then(async nameText => {
+    fetch("systems/dh/names/human_surnames_prefix.txt").then(r => r.text()).then(async nameText => {
       this.surnamePrefixes = []
        nameText.split("\n").forEach((nameGroup) => this.surnamePrefixes.push(nameGroup.split(",").map(function(item) { return item.trim()})))
     })
-    fetch("systems/wfrp4e/names/human_surnames_suffix.txt").then(r => r.text()).then(async nameText => {
+    fetch("systems/dh/names/human_surnames_suffix.txt").then(r => r.text()).then(async nameText => {
       this.surnameSuffixes = []
        nameText.split("\n").forEach((nameGroup) => this.surnameSuffixes.push(nameGroup.split(",").map(function(item) { return item.trim()})))
     })
-    fetch("systems/wfrp4e/names/male_human_forenames.txt").then(r => r.text()).then(async nameText => {
+    fetch("systems/dh/names/male_human_forenames.txt").then(r => r.text()).then(async nameText => {
       this.maleForenames = []
        nameText.split("\n").forEach((nameGroup) => this.maleForenames.push(nameGroup.split(",").map(function(item) { return item.trim()})))
     })
-    fetch("systems/wfrp4e/names/female_human_forenames.txt").then(r => r.text()).then(async nameText => {
+    fetch("systems/dh/names/female_human_forenames.txt").then(r => r.text()).then(async nameText => {
       this.femaleForenames = []
        nameText.split("\n").forEach((nameGroup) => this.femaleForenames.push(nameGroup.split(",").map(function(item) { return item.trim()})))
     })

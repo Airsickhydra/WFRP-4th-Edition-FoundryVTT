@@ -1,4 +1,4 @@
-class GeneratorWfrp4e
+class GeneratorWfrp4e 
 {
   static speciesStage()
   {
@@ -160,7 +160,7 @@ class GeneratorWfrp4e
 
   static async displayCareer(careerName, species, exp, isReroll, isChosen)
   {
-    let pack = game.packs.find(p => p.collection == "wfrp4e.careers")
+    let pack = game.packs.find(p => p.collection == "dh.careers")
     let careers =  await pack.getContent();
     let careerFound;
     for (let c of careers)
@@ -222,7 +222,7 @@ class GeneratorWfrp4e
     if ( ["gmroll", "blindroll"].includes(chatData.rollMode) ) chatData["whisper"] = ChatMessage.getWhisperIDs("GM");
     if ( chatData.rollMode === "blindroll" ) chatData["blind"] = true;
 
-    renderTemplate(`systems/wfrp4e/templates/chat/chargen/details.html`, chatData).then(html => {
+    renderTemplate(`systems/dh/templates/chat/chargen/details.html`, chatData).then(html => {
       chatData["flags.transfer"] = JSON.stringify(dataTransfer);
       chatData.content = html;
       ChatMessage.create(chatData);

@@ -486,7 +486,7 @@ class ItemWfrp4e extends Item {
        return properties;
      }
   }
-  // Assign Itemdh class to CONFIG
+  // Assign ItemWfrp4e class to CONFIG
   CONFIG.Item.entityClass = ItemWfrp4e;
   
   

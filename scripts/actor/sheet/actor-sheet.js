@@ -319,7 +319,7 @@ class ActorSheetWfrp4e extends ActorSheet {
   // Unarmed attack button (fist in the combat tab)
   html.find('.fist-icon').click(async event => {
     event.preventDefault();
-    let pack = game.packs.find(p => p.collection == "wfrp4e.trappings");
+    let pack = game.packs.find(p => p.collection == "dh.trappings");
     let weapons;
     await pack.getIndex().then(index => weapons = index);
     let unarmedId = weapons.find(w => w.name.toLowerCase() == "unarmed");
@@ -655,7 +655,7 @@ class ActorSheetWfrp4e extends ActorSheet {
   html.find('.item-delete').click(ev => {
     let li = $(ev.currentTarget).parents(".item"),
       itemId = li.attr("data-item-id");
-      renderTemplate('systems/wfrp4e/templates/chat/delete-item-dialog.html').then(html => {
+      renderTemplate('systems/dh/templates/chat/delete-item-dialog.html').then(html => {
         new Dialog({
         title: "Delete Confirmation",
         content: html,
@@ -807,7 +807,7 @@ class ActorSheetWfrp4e extends ActorSheet {
   html.find('.input.species').focusout(async event => {
     if (this.actor.data.type == "character")
       return
-    if (game.settings.get("wfrp4e", "npcSpeciesCharacteristics"))
+    if (game.settings.get("dh", "npcSpeciesCharacteristics"))
     {
       let species = event.target.value;
       await this.actor.update({"data.details.species.value" : species});
@@ -1362,7 +1362,7 @@ class ActorSheetWfrp4e extends ActorSheet {
         });
       }
     }
-    data["img"] = "systems/wfrp4e/icons/blank.png";
+    data["img"] = "systems/dh/icons/blank.png";
     data["name"] = `New ${data.type.capitalize()}`;
     this.actor.createEmbeddedEntity("OwnedItem", data,
     {
