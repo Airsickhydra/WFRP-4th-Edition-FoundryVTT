@@ -1270,7 +1270,7 @@ class ActorWfrp4e extends Actor {
         testData.extra.damage = Number(result.SL) // Start damage off with SL
 
         if (Number(testData.extra.trait.data.specification.value)) // Add the specification starting value
-          testData.extra.damage +=  Number(testData.extra.trait.data.specification.value)
+          testData.extra.damage +=  Number(testData.extra.trait.data.specification.value) || 0
 
         if (testData.extra.trait.data.rollable.bonusCharacteristic) // Add the bonus characteristic (probably strength)
           testData.extra.damage += Number(WFRP_Utility.getSpeaker(cardOptions.speaker).data.data.characteristics[testData.extra.trait.data.rollable.bonusCharacteristic].bonus) || 0;
@@ -2901,7 +2901,7 @@ class ActorWfrp4e extends Actor {
         penetrating = weaponProperties.qualities.includes("Penetrating")
         undamaging = weaponProperties.flaws.includes("Undamaging")
         hack = weaponProperties.qualities.includes("Hack")
-        impale = weaponProperties.qualities.includes("Impale")
+        impale = weaponProperties.qualities.includes("Vengeful")
       }
       // see if armor flaws should be triggered
       let ignorePartial = opposeData.attackerTestResult.roll % 2 == 0 || opposeData.attackerTestResult.extra.critical

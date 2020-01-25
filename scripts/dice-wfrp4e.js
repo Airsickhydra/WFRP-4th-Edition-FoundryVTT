@@ -269,7 +269,7 @@ class DiceWFRP {
          if (testResults.roll % 11 == 0)
            testResults.extra.critical = "Critical"
 
-         if (weapon.properties.qualities.includes("Impale") && testResults.roll % 10 == 0)
+         if (weapon.properties.qualities.includes("Vengeful") && testResults.roll % 10 == 0)
            testResults.extra.critical = "Critical"
        }
 
@@ -285,7 +285,7 @@ class DiceWFRP {
         unitValue = unitValue == 0 ? 10 : unitValue; // If unit value == 0, use 10
 
 
-        if (weapon.properties.qualities.includes("Damaging") && unitValue > Number(testResults.SL))
+        if (weapon.properties.qualities.includes("Tearing") && unitValue > Number(testResults.SL))
           damageToUse = unitValue;
 
         if (testData.extra.attackType == "melee")
