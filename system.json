@@ -2,7 +2,7 @@
   "name": "dh",
   "title": "Dark Heresy Mod",
   "description": "A comprehensive system for running grim and perilious games of Warhammer Fantasy Roleplay in the Foundry VTT environment.",
-  "version": "0.9.6.3",
+  "version": "0.9.7.3",
   "author": "Airsickhydra, Moo Man",
   "scripts": [
     "./scripts/config-wfrp4e.js",
@@ -32,7 +32,8 @@
     "./scripts/hooks/renderChatMessage.js",
     "./scripts/hooks/renderJournalSheet.js",
     "./scripts/hooks/updateCombat.js",
-    "./scripts/hooks/createChatMessage.js"
+    "./scripts/hooks/createChatMessage.js",
+    "./scripts/hooks/hotbarDrop.js"
   ],
   "styles": ["./css/dh.css"],
   "packs": [
