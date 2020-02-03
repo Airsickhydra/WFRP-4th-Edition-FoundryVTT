@@ -2,7 +2,7 @@
   "name": "dh",
   "title": "Dark Heresy Mod",
   "description": "A comprehensive system for running grim and perilious games of Warhammer Fantasy Roleplay in the Foundry VTT environment.",
-  "version": "0.9.7.3",
+  "version": "0.9.7",
   "author": "Airsickhydra, Moo Man",
   "scripts": [
     "./scripts/config-wfrp4e.js",
